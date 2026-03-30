@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# React TS 问卷系统
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+基于 React + TypeScript 的问卷调查系统，支持问卷的创建、编辑、管理和数据统计。
 
-## Available Scripts
+## 技术栈
 
-In the project directory, you can run:
+- React 18 + TypeScript
+- React Router v6（路由管理）
+- Redux Toolkit（状态管理）
+- Ant Design 5（UI 组件库）
+- ahooks（React Hooks 工具库）
+- CRACO（CRA 配置覆盖）
+- Sass / CSS Modules（样式方案）
+- Axios（HTTP 请求）
+- Mock.js（数据模拟）
 
-### `npm start`
+## 功能模块
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 首页展示
+- 用户登录 / 注册
+- 问卷管理（列表、收藏、回收站）
+- 问卷编辑器（画布拖拽、组件库、属性面板、图层管理）
+- 问卷统计
+- 404 页面
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 问卷组件
 
-### `npm test`
+| 分组     | 组件         |
+| -------- | ------------ |
+| 文本显示 | 问卷信息、标题、段落 |
+| 用户输入 | 单行输入、多行输入   |
+| 用户选择 | 单选、多选           |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 项目结构
 
-### `npm run build`
+```
+src/
+├── components/        # 公共组件（Logo、Card、问卷组件等）
+├── hooks/             # 自定义 Hooks
+├── layouts/           # 页面布局
+├── pages/             # 页面
+│   ├── Home/          # 首页
+│   ├── Login/         # 登录
+│   ├── Register/      # 注册
+│   ├── manage/        # 问卷管理（列表/收藏/回收站）
+│   └── question/      # 问卷编辑 & 统计
+├── router/            # 路由配置
+├── store/             # Redux Store
+│   └── modules/       # 组件、页面信息、用户 Reducer
+├── _mock/             # Mock 数据
+└── assets/            # 静态资源
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 快速开始
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# 安装依赖
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 启动开发服务器
+npm start
 
-### `npm run eject`
+# 构建生产版本
+npm run build
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# 运行测试
+npm test
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+开发服务器默认运行在 [http://localhost:3000](http://localhost:3000)。
